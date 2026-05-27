@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { useAuth } from "../../context/AuthContext";
 import axiosInstance from "../../api/axiosInstance";
-import useNotificationSocket from "../../hooks/useNotificationSocket";
+import useNotificationSocket from "../../hooks/useNotificationSocket.js"; // Or .jsx, depending on what you named it
 import { timeAgo } from "../../utils/formatters";
 import toast from "react-hot-toast";
 import { Bell, BellOff, CheckCheck, Trash2, RefreshCw, Check, Wifi, WifiOff } from "lucide-react";
