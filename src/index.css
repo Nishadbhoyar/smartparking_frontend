@@ -1,7 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap");
 
-@import "leaflet/dist/leaflet.css";
-
-
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -58,7 +57,6 @@
     @apply font-display text-lg font-bold text-gray-900;
   }
 }
-
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
