@@ -3,11 +3,8 @@ import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
 import { AuthProvider } from "./context/AuthContext";
 import AppRouter from "./routes/AppRouter";
-import './index.css'
 
 function App() {
-  // H-4 FIX: listen for 403 events fired by the axios interceptor and show a toast
-  // instead of silently logging the user out.
   useEffect(() => {
     const handle403 = (e) => {
       toast.error(`Access denied${e.detail?.url ? ` (${e.detail.url})` : ""}. You don't have permission for this action.`);
