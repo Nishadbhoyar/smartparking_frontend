@@ -123,7 +123,7 @@ const RequestValetPage = () => {
         <div className="grid grid-cols-2 gap-3">
           {[
             { key: "CAR",     label: "Car",     icon: Car,  desc: "Sedan, SUV, hatchback" },
-            { key: "EV_BIKE", label: "EV Bike", icon: Zap,  desc: "Electric two-wheeler" },
+            { key: "EV_BIKE", label: " EV Vehicle", icon: Zap,  desc: "(BEV),(PHEVs),(HEVs) " },
           ].map(({ key, label, icon: Icon, desc }) => (
             <button
               key={key}

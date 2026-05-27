@@ -229,10 +229,22 @@ const ValetTrackingPage = () => {
   };
 
   // OTP expired — revert UI back to PARKED so user can try again
-  const handleReturnExpired = () => {
-    setStatus("PARKED");
-    setRetOtp(null);
-    setRetExp(null);
+  // FIXED — calls backend to reset DB, then updates local state
+  const handleReturnExpired = async () => {
+      try {
+        // Hitting request-return again is now safe — backend handles expired OTP case
+        const res = await axiosInstance.post(`/api/valet/${id}/request-return`);
+        const data = res.data;
+        setStatus(normalise(data.status));
+        setRetOtp(data.returnConfirmOtp);
+        setRetExp(data.returnConfirmOtpExpiry);
+        toast.success("OTP expired. A new one has been generated — confirm to request your car back.");
+      } catch {
+        // Fallback: polling will correct the state in 10s
+        setStatus("PARKED");
+        setRetOtp(null);
+        setRetExp(null);
+      }
   };
 
   const copyOtp = (otp) => {

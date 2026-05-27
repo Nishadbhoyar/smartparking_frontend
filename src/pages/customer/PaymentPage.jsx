@@ -301,10 +301,10 @@ const PaymentPage = () => {
               </button>
             )}
             <button 
-              onClick={() => navigate(`/customer/receipt/${referenceId}`)} 
+              onClick={() => navigate(`/customer/dashboard`)} 
               className="flex-1 bg-[#adc6ff] hover:bg-[#adc6ff]/90 text-[#00285d] font-bold py-3.5 rounded-xl transition-all shadow-[0_0_20px_rgba(173,198,255,0.2)]"
             >
-              View Receipt
+              Back to Dashboard
             </button>
           </div>
         </div>

@@ -80,7 +80,7 @@ const AllUsersPage = () => {
               {[
                 { icon: User,   label: "Name",  value: user.name },
                 { icon: Mail,   label: "Email", value: user.email },
-                { icon: Phone,  label: "Phone", value: user.phoneNumber || "Not provided" },
+                { icon: Phone,  label: "Phone", value: user.phone || user.phoneNumber || user.mobileNo || "Not provided" },
                 { icon: Shield, label: "Role",  value: user.role?.replace(/_/g, " ") },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-3">
