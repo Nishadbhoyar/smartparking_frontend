@@ -94,7 +94,7 @@ import CarRentalBookingsPage from "../pages/car-owner/CarRentalBookingsPage";
 // ── Shared ────────────────────────────────────────────────────────────────────
 import ProfilePage       from "../pages/shared/ProfilePage";
 import NotificationsPage from "../pages/shared/NotificationsPage";
-import PaymentReceiptPage from "../../src/pages/shared/Paymentreceiptpage";
+import PaymentReceiptPage from "../pages/shared/Paymentreceiptpage";
 
 const AppRouter = () => (
   <Routes>
